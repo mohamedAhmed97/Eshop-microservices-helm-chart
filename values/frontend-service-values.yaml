@@ -1,0 +1,25 @@
+replicaCount: 1
+appName: frontend-service
+imageName: gcr.io/google-samples/microservices-demo/frontend
+appVersion: v0.2.3
+containerPort: 8080
+containerEnvVars:
+- name: "PORT"
+  value: "8080"
+- name: "PRODUCT_CATALOG_SERVICE_ADDR"
+  value: "catalog-service-svc:3550"
+- name: "CURRENCY_SERVICE_ADDR"
+  value: "currency-service-svc:7000"
+- name: "CART_SERVICE_ADDR"
+  value: "cart-service-svc:7070"
+- name: "RECOMMENDATION_SERVICE_ADDR"
+  value: "recommendation-service-svc:8080"
+- name: "CHECKOUT_SERVICE_ADDR"
+  value: "checkout-service-svc:5050"
+- name: "SHIPPING_SERVICE_ADDR"
+  value: "shipping-service-svc:50051"
+- name: "AD_SERVICE_ADDR"
+  value: "adservice-service-svc:9555"
+  
+serviceType: LoadBalancer
+servicePort: 80
