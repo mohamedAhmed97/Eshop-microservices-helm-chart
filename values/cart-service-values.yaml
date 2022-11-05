@@ -7,7 +7,7 @@ containerEnvVars:
 - name: "PORT"
   value: "7070"
 - name: "REDIS_ADDR"
-  value: "redis-service-svc:6379"
+  value: "redis-cart:6379"
   
 serviceType: ClusterIP
 servicePort: 7070
